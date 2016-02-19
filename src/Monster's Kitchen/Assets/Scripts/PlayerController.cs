@@ -15,13 +15,13 @@ public class PlayerController : MonoBehaviour {
         float vertVel = rigidbody2D.velocity.y;
         float horizVel = 0.0f;
 
-        if (Input.GetAxis("Horizontal") < -0.5)
+        if (Input.GetAxis("Horizontal") < 0)
         { // move left
             horizVel = -horizontalSpeed;
-        } else if (Input.GetAxis("Horizontal") > 0.5)
+        } else if (Input.GetAxis("Horizontal") > 0)
         { // move right
             horizVel = horizontalSpeed;
         }
-        rigidbody2D.velocity = new Vector2(-horizontalSpeed, rigidbody2D.velocity.y);
+        rigidbody2D.velocity = new Vector2(horizVel, vertVel);
     }
 }
