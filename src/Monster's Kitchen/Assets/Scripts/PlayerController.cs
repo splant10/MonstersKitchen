@@ -2,8 +2,10 @@
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
-    public int horizontalSpeed;
-    public int jumpSpeed;
+    public float horizontalSpeed;
+    public float jumpSpeed;
+
+    public Transform bottom;
 
     private bool onGround;
 
@@ -36,16 +38,6 @@ public class PlayerController : MonoBehaviour {
 
     public bool IsGrounded()
     {
-        return onGround;
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        Rigidbody2D rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
-
-        if (collision.transform.position.y < rigidbody2D.transform.position.y)
-        {
-            onGround = true;
-        }
+        return Physics2D.Linecast(bottom.position, (Vector2)bottom.position + (0.01f * Vector2.down));
     }
 }
