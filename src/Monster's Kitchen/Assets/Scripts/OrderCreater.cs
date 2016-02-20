@@ -9,6 +9,8 @@ public class OrderCreater : MonoBehaviour {
     private float lastOrderTime;
     public OrderList orderList;
 
+    public float timeBetweenOrders;
+
 	public OrderCreater(){
 
 		allRecipes = new Recipe[2];
