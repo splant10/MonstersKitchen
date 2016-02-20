@@ -16,4 +16,8 @@ public class Ingredient {
 	bool IsFlour() {
 		return id == ID.FLOUR;
 	}
+
+	public override bool Equals(object ingredient) {
+		return this.id == ((Ingredient)ingredient).id;
+	}
 }

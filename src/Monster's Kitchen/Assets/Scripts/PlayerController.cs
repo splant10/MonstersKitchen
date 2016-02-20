@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour {
     public float horizontalSpeed;
@@ -11,11 +10,12 @@ public class PlayerController : MonoBehaviour {
     private bool recentlyInteracted;
     private bool facingRight;
 
-	public Queue<Order> orders;
+	public OrderList ListOfOrders;
+	public Inventroy inventory;
 
 	// Use this for initialization
 	void Start () {
-        orders = new Queue<Order>();
+		ListOfOrders = new OrderList ();
         facingRight = true;
 	}
 	
@@ -46,6 +46,11 @@ public class PlayerController : MonoBehaviour {
             vertVel = jumpSpeed;
         }
 
+		// handles order expiration
+		if (ListOfOrders.orders.Count > 0 && ListOfOrders.orders.Peek().IsExpired()) {
+			ListOfOrders.orders.Dequeue();
+		}
+
         if (Input.GetAxis("Fire2") != 0 && !recentlyInteracted)
         {
             Interact();
@@ -56,10 +61,6 @@ public class PlayerController : MonoBehaviour {
         }
 
         rigidbody2D.velocity = new Vector2(horizVel, vertVel);
-
-		if (orders.Count > 0 && orders.Peek().IsExpired()) {
-			orders.Dequeue();
-		}
 
 	}
 
@@ -88,7 +89,4 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-	public void AddOrder(Order order){
-		orders.Enqueue (order);
-	}
 }
