@@ -1,0 +1,386 @@
+fileFormatVersion: 2
+guid: 86e9c5d7526050145afda54c0a425887
+timeCreated: 1456004915
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: chef_attack_sprites_0
+    21300002: chef_attack_sprites_1
+    21300004: chef_attack_sprites_2
+    21300006: chef_attack_sprites_3
+    21300008: chef_attack_sprites_4
+    21300010: chef_attack_sprites_5
+    21300012: chef_attack_sprites_6
+    21300014: chef_attack_sprites_7
+    21300016: chef_attack_sprites_8
+    21300018: chef_attack_sprites_9
+    21300020: chef_attack_sprites_10
+    21300022: chef_attack_sprites_11
+    21300024: chef_attack_sprites_12
+    21300026: chef_attack_sprites_13
+    21300028: chef_attack_sprites_14
+    21300030: chef_attack_sprites_15
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: chef_attack_sprites_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 134
+        height: 192
+      alignment: 9
+      pivot: {x: 0.8243978, y: 0.8021879}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52.00139, y: 34.11078}
+        - {x: -56.00139, y: 33.11078}
+        - {x: -98.00139, y: -3.8892212}
+        - {x: -98.00139, y: -91.88922}
+        - {x: -67.00139, y: -136.88922}
+        - {x: 8.998611, y: -136.88922}
+        - {x: 20.998611, y: -102.88922}
+        - {x: 20.998611, y: 28.110779}
+        - {x: 9.998611, y: 34.11078}
+    - name: chef_attack_sprites_1
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 135
+        height: 192
+      alignment: 9
+      pivot: {x: 0.8295989, y: 0.8013146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -61.410614, y: 34.259308}
+        - {x: -99.410614, y: 16.259308}
+        - {x: -99.410614, y: -86.74069}
+        - {x: -95.410614, y: -98.74069}
+        - {x: -64.410614, y: -136.74069}
+        - {x: 6.589386, y: -136.74069}
+        - {x: 20.589386, y: -107.74069}
+        - {x: 20.589386, y: 34.259308}
+    - name: chef_attack_sprites_2
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 0
+        width: 136
+        height: 192
+      alignment: 9
+      pivot: {x: 0.829409, y: 0.80154675}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14.091766, y: 34.21982}
+        - {x: -53.908234, y: 34.21982}
+        - {x: -95.90823, y: 25.219818}
+        - {x: -99.90823, y: 11.219818}
+        - {x: -99.90823, y: -92.78018}
+        - {x: -71.90823, y: -136.78018}
+        - {x: 11.091766, y: -136.78018}
+        - {x: 22.091766, y: -109.78018}
+        - {x: 22.091766, y: 2.219818}
+        - {x: 16.091766, y: 33.21982}
+    - name: chef_attack_sprites_3
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 0
+        width: 135
+        height: 192
+      alignment: 9
+      pivot: {x: 0.83216465, y: 0.80240434}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -95.50311, y: -2.9260254}
+        - {x: -99.50311, y: -18.926025}
+        - {x: -99.50311, y: -57.926025}
+        - {x: -87.50311, y: -93.926025}
+        - {x: -63.503113, y: -136.92603}
+        - {x: 3.4968872, y: -136.92603}
+        - {x: 21.496887, y: -101.926025}
+        - {x: 21.496887, y: 34.073975}
+        - {x: -46.503113, y: 34.073975}
+        - {x: -56.503113, y: 33.073975}
+    - name: chef_attack_sprites_4
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 0
+        width: 135
+        height: 192
+      alignment: 9
+      pivot: {x: 0.8329219, y: 0.79972893}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -51.436523, y: 34.52896}
+        - {x: -99.43652, y: 11.528961}
+        - {x: -99.43652, y: -82.47104}
+        - {x: -66.43652, y: -133.47104}
+        - {x: -63.436523, y: -136.47104}
+        - {x: 20.563477, y: -136.47104}
+        - {x: 20.563477, y: 34.52896}
+    - name: chef_attack_sprites_5
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 0
+        width: 134
+        height: 192
+      alignment: 9
+      pivot: {x: 0.83185726, y: 0.8022061}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -50.743835, y: 34.107697}
+        - {x: -98.743835, y: 1.1076965}
+        - {x: -98.743835, y: -65.8923}
+        - {x: -79.743835, y: -89.8923}
+        - {x: -71.743835, y: -91.8923}
+        - {x: -65.743835, y: -133.8923}
+        - {x: -64.743835, y: -136.8923}
+        - {x: 5.2561646, y: -136.8923}
+        - {x: 15.256165, y: -134.8923}
+        - {x: 20.256165, y: -58.892303}
+        - {x: 20.256165, y: -1.8923035}
+        - {x: 16.256165, y: 34.107697}
+    - name: chef_attack_sprites_6
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 0
+        width: 135
+        height: 192
+      alignment: 9
+      pivot: {x: 0.8311605, y: 0.8009675}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -62.497375, y: 34.31833}
+        - {x: -82.497375, y: 12.318329}
+        - {x: -99.497375, y: -13.681671}
+        - {x: -99.497375, y: -59.68167}
+        - {x: -65.497375, y: -136.68167}
+        - {x: 6.5026245, y: -136.68167}
+        - {x: 21.502625, y: -110.68167}
+        - {x: 21.502625, y: 34.31833}
+    - name: chef_attack_sprites_7
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 0
+        width: 135
+        height: 199
+      alignment: 9
+      pivot: {x: 0.82805806, y: 0.77188593}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21.216492, y: -82.421844}
+        - {x: 22.216492, y: -68.421844}
+        - {x: 22.216492, y: 33.578156}
+        - {x: -4.7835083, y: 40.578156}
+        - {x: -49.78351, y: 40.578156}
+        - {x: -97.78351, y: 2.5781555}
+        - {x: -97.78351, y: -72.421844}
+        - {x: -62.78351, y: -136.42184}
+        - {x: 1.2164917, y: -136.42184}
+        - {x: 6.2164917, y: -133.42184}
+        - {x: 5.2164917, y: -123.421844}
+        - {x: 17.216492, y: -93.421844}
+    - name: chef_attack_sprites_8
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 0
+        width: 135
+        height: 210
+      alignment: 9
+      pivot: {x: 0.82644224, y: 0.731672}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -86.7475, y: 49.90901}
+        - {x: -97.7475, y: 11.909012}
+        - {x: -97.7475, y: -89.09099}
+        - {x: -63.747498, y: -136.09099}
+        - {x: 4.2525024, y: -136.09099}
+        - {x: 21.252502, y: -116.09099}
+        - {x: 21.252502, y: 44.90901}
+        - {x: -0.74749756, y: 49.90901}
+    - name: chef_attack_sprites_9
+      rect:
+        serializedVersion: 2
+        x: 1271
+        y: 0
+        width: 135
+        height: 199
+      alignment: 9
+      pivot: {x: 0.82482636, y: 0.77517486}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -98.596924, y: -7.001526}
+        - {x: -98.596924, y: -64.001526}
+        - {x: -72.596924, y: -137.00153}
+        - {x: 22.403076, y: -137.00153}
+        - {x: 22.403076, y: 39.998474}
+        - {x: -43.596924, y: 39.998474}
+        - {x: -61.596924, y: 33.998474}
+    - name: chef_attack_sprites_10
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 0
+        width: 135
+        height: 192
+      alignment: 9
+      pivot: {x: 0.82644224, y: 0.8022515}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -79.818726, y: 34.099976}
+        - {x: -97.818726, y: -4.9000244}
+        - {x: -97.818726, y: -101.900024}
+        - {x: -71.818726, y: -136.90002}
+        - {x: 5.1812744, y: -136.90002}
+        - {x: 22.181274, y: -116.900024}
+        - {x: 22.181274, y: 34.099976}
+    - name: chef_attack_sprites_11
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 0
+        width: 135
+        height: 192
+      alignment: 9
+      pivot: {x: 0.82913953, y: 0.8012716}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -68.2699, y: 34.2666}
+        - {x: -98.2699, y: -10.733398}
+        - {x: -98.2699, y: -105.7334}
+        - {x: -75.2699, y: -136.7334}
+        - {x: 12.730103, y: -136.7334}
+        - {x: 20.730103, y: -121.7334}
+        - {x: 20.730103, y: 34.2666}
+    - name: chef_attack_sprites_12
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 0
+        width: 135
+        height: 192
+      alignment: 9
+      pivot: {x: 0.82913953, y: 0.8012716}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -67.29846, y: 34.2666}
+        - {x: -98.29846, y: 15.266602}
+        - {x: -98.29846, y: -94.7334}
+        - {x: -80.29846, y: -136.7334}
+        - {x: 20.701538, y: -136.7334}
+        - {x: 20.701538, y: 24.266602}
+        - {x: 16.701538, y: 34.2666}
+    - name: chef_attack_sprites_13
+      rect:
+        serializedVersion: 2
+        x: 1882
+        y: 0
+        width: 135
+        height: 192
+      alignment: 9
+      pivot: {x: 0.8335874, y: 0.80022913}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -40.473145, y: 34.44388}
+        - {x: -92.473145, y: 19.443878}
+        - {x: -97.473145, y: -1.5561218}
+        - {x: -97.473145, y: -73.55612}
+        - {x: -63.473145, y: -134.55612}
+        - {x: -62.473145, y: -136.55612}
+        - {x: 15.526855, y: -136.55612}
+        - {x: 21.526855, y: -91.55612}
+        - {x: 21.526855, y: 19.443878}
+        - {x: 18.526855, y: 34.44388}
+    - name: chef_attack_sprites_14
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 0
+        width: 135
+        height: 192
+      alignment: 9
+      pivot: {x: 0.8335883, y: 0.80022913}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -53.544678, y: 34.44388}
+        - {x: -97.54468, y: 2.4438782}
+        - {x: -97.54468, y: -71.55612}
+        - {x: -64.54468, y: -136.55612}
+        - {x: 16.455322, y: -136.55612}
+        - {x: 20.455322, y: -109.55612}
+        - {x: 20.455322, y: 33.44388}
+        - {x: 16.455322, y: 34.44388}
+    - name: chef_attack_sprites_15
+      rect:
+        serializedVersion: 2
+        x: 2174
+        y: 0
+        width: 134
+        height: 192
+      alignment: 9
+      pivot: {x: 0.84055793, y: 0.80022913}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -55.876465, y: 34.44388}
+        - {x: -96.876465, y: 13.443878}
+        - {x: -96.876465, y: -67.55612}
+        - {x: -60.876465, y: -136.55612}
+        - {x: 14.123535, y: -136.55612}
+        - {x: 20.123535, y: -121.55612}
+        - {x: 20.123535, y: 34.44388}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
