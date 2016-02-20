@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour {
 
     public Transform bottom;
 
+    private bool recentlyInteracted;
+
 	// Use this for initialization
 	void Start () {
 
@@ -31,14 +33,16 @@ public class PlayerController : MonoBehaviour {
             vertVel = jumpSpeed;
         }
 
-        if (Input.GetAxis("Fire2") != 0)
+        if (Input.GetAxis("Fire2") != 0 && !recentlyInteracted)
         {
             Interact();
+            recentlyInteracted = true;
+        } else if (Input.GetAxis("Fire2") == 0)
+        {
+            recentlyInteracted = false;
         }
 
         rigidbody2D.velocity = new Vector2(horizVel, vertVel);
-
-        Debug.Log(gameObject.transform.position);
     }
 
     public bool IsGrounded()
