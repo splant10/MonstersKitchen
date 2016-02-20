@@ -27,8 +27,10 @@ public class OrderList : MonoBehaviour {
 	}
 
 	public void AddOrder(Order order){
-        Debug.Log("Adding order, " + orderBlocks.Length + " blocks found");
-        orderBlocks[orders.Count].SetOrder(order);
+        if (orders.Count < orderBlocks.Length)
+        {
+            orderBlocks[orders.Count].SetOrder(order);
+        }
 		orders.Enqueue(order);
 	}
 
