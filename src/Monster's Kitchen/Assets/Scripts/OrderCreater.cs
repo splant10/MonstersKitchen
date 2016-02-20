@@ -23,6 +23,7 @@ public class OrderCreater : MonoBehaviour {
 		if (lastOrderTime + 10 < Time.time)
         {
             orderList.AddOrder(OrderAlgorithm());
+            lastOrderTime = Time.time;
         }
 	}
 

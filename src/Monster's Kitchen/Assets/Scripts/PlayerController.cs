@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour {
     private bool recentlyInteracted;
     private bool facingRight;
 
-	public OrderList ListOfOrders;
+	public OrderList listOfOrders;
 	public Inventroy inventory;
 
     private Rigidbody2D rb2d;
@@ -63,8 +63,8 @@ public class PlayerController : MonoBehaviour {
         }
 
 		// handles order expiration
-		if (ListOfOrders.orders.Count > 0 && ListOfOrders.orders.Peek().IsExpired()) {
-			ListOfOrders.orders.Dequeue();
+		if (listOfOrders.orders.Count > 0 && listOfOrders.orders.Peek().IsExpired()) {
+			listOfOrders.orders.Dequeue();
 		}
 
         if (Input.GetAxis("Fire2") != 0 && !recentlyInteracted)

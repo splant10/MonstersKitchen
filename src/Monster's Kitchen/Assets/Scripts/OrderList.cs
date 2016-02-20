@@ -19,14 +19,8 @@ public class OrderList : MonoBehaviour {
 	// Here we handle Order drawing
 	void Update () {
 		foreach (Order order in orders) {
-            if (order != null)
-            {
-                timeLimit = order.TimeRemaining();
-                Debug.Log("Time remaining: " + timeLimit);
-            } else
-            {
-                Debug.Log("Null order");
-            }
+            timeLimit = order.TimeRemaining();
+            Debug.Log("Time remaining: " + timeLimit);
 		}
 	
 	}
