@@ -9,9 +9,14 @@ public class OrderCreater : MonoBehaviour {
     public OrderList orderList;
 
 	public OrderCreater(){
-		allRecipes = new Recipe[1];
-		Ingredient.ID[] ingredientIDs = {Ingredient.ID.FLOUR, Ingredient.ID.SUGAR, Ingredient.ID.EGGS};
+		allRecipes = new Recipe[2];
+        Ingredient.ID[] ingredientIDs;
+
+        ingredientIDs = new Ingredient.ID[] { Ingredient.ID.FLOUR, Ingredient.ID.SUGAR, Ingredient.ID.EGGS};
 		allRecipes[0] = new Recipe(0, "CauldronCakes", 30, ingredientIDs);
+
+        ingredientIDs = new Ingredient.ID[] { Ingredient.ID.SUGAR, Ingredient.ID.EGGS};
+        allRecipes[1] = new Recipe(1, "Murangueei", 30, ingredientIDs);
 	}
 	// Use this for initialization
 	void Start () {
@@ -28,7 +33,7 @@ public class OrderCreater : MonoBehaviour {
 	}
 
 	public Order OrderAlgorithm (){
-        return new Order(allRecipes[0]);
+        return new Order(allRecipes[Random.Range(0, allRecipes.Length)]);
 	}
 
 }

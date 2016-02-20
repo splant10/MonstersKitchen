@@ -21,4 +21,9 @@ public class Order {
 	public float TimeRemaining(){
 		return (startTime - Time.time);
 	}
+
+    public override string ToString()
+    {
+        return recipe.ToString();
+    }
 }

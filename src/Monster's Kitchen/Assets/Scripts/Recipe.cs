@@ -18,4 +18,9 @@ public class Recipe {
 	public float GetTimeLimit() {
 		return timeLimit;
 	}
+
+    public override string ToString()
+    {
+        return name;
+    }
 }
