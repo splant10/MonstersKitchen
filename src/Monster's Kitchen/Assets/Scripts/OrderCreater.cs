@@ -10,9 +10,15 @@ public class OrderCreater : MonoBehaviour {
     public OrderList orderList;
 
 	public OrderCreater(){
-		allRecipes = new Recipe[1];
-		List<Ingredient.ID> ingredientIDs = new List<Ingredient.ID>(new Ingredient.ID[]{Ingredient.ID.FLOUR, Ingredient.ID.SUGAR, Ingredient.ID.EGGS});
+
+		allRecipes = new Recipe[2];
+		List<Ingredient.ID> ingredientIDs;
+
+		ingredientIDs = new List<Ingredient.ID>(new Ingredient.ID[] { Ingredient.ID.FLOUR, Ingredient.ID.SUGAR, Ingredient.ID.EGGS});
 		allRecipes[0] = new Recipe(0, "CauldronCakes", 30, ingredientIDs);
+
+		ingredientIDs = new List<Ingredient.ID>(new Ingredient.ID[] { Ingredient.ID.SUGAR, Ingredient.ID.EGGS});
+        allRecipes[1] = new Recipe(1, "Murangueei", 30, ingredientIDs);
 	}
 	// Use this for initialization
 	void Start () {
@@ -21,7 +27,7 @@ public class OrderCreater : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (lastOrderTime + 10 < Time.time)
+		if (lastOrderTime + 3 < Time.time)
         {
             orderList.AddOrder(OrderAlgorithm());
             lastOrderTime = Time.time;
@@ -29,7 +35,7 @@ public class OrderCreater : MonoBehaviour {
 	}
 
 	public Order OrderAlgorithm (){
-        return new Order(allRecipes[0]);
+        return new Order(allRecipes[Random.Range(0, allRecipes.Length)]);
 	}
 
 }

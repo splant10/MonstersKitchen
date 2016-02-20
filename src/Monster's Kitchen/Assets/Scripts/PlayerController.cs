@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour {
     public float horizontalSpeed;
     public float jumpSpeed;
     public bool isGrounded;
+    public bool isAttacking;
 
     public Transform bottom;
 
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         facingRight = true;
+		inventory = new Inventroy ();
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
     }
@@ -32,6 +34,7 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetAxis("Horizontal") < 0)
         { // move left
+            anim.SetBool("isAttacking", false);
             horizVel = -horizontalSpeed;
             if (facingRight)
             {
@@ -40,6 +43,7 @@ public class PlayerController : MonoBehaviour {
             anim.SetFloat("Speed", horizontalSpeed);
         } else if (Input.GetAxis("Horizontal") > 0)
         { // move right
+            anim.SetBool("isAttacking", false);
             horizVel = horizontalSpeed;
             if (!facingRight)
             {
@@ -66,7 +70,11 @@ public class PlayerController : MonoBehaviour {
 		if (listOfOrders.orders.Count > 0 && listOfOrders.orders.Peek().IsExpired()) {
 			listOfOrders.orders.Dequeue();
 		}
-
+        if (Input.GetAxis("Fire1") != 0/* && !recentlyInteracted*/)
+        {
+            // Interact();
+            anim.SetBool("isAttacking", true);
+        }
         if (Input.GetAxis("Fire2") != 0 && !recentlyInteracted)
         {
             Interact();

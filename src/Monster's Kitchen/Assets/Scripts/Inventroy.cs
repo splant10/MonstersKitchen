@@ -8,9 +8,10 @@ public class Inventroy {
 	public List<Ingredient.ID> ingredients;
 
 	public Inventroy(){
+		ingredients = new List<Ingredient.ID> ();
 		// initialize inventory with null spaces
 		for (int i = 0; i < capacity; ++i) {
-			ingredients[i] = Ingredient.ID.NONE;
+			ingredients.Add(Ingredient.ID.NONE);
 		}
 	}
 	public bool Contains(Ingredient.ID id){

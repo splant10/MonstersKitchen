@@ -1,16 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/OrderList.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Inventroy.cs">
     <Files>
-      <File FileName="Assets/Scripts/OrderCreater.cs" Line="30" Column="41" />
+      <File FileName="Assets/Scripts/Interactable.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/OrderCreater.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Order.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Recipe.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Ingredient.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/PlayerController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/OrderList.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Cauldron.cs" Line="9" Column="3" />
-      <File FileName="Assets/Scripts/Inventroy.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/IngredientContainers.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Cauldron.cs" Line="13" Column="101" />
+      <File FileName="Assets/Scripts/Inventroy.cs" Line="21" Column="4" />
+      <File FileName="Assets/Scripts/IngredientContainers.cs" Line="17" Column="87" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
