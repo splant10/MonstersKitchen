@@ -47,17 +47,12 @@ public class PlayerController : MonoBehaviour {
 
         rigidbody2D.velocity = new Vector2(horizVel, vertVel);
 
-		foreach (Order order in orders) {
-			if (order.IsExpired ()) {
-				order = null;
-
-			}
-			else { 
-				order.TimeRemaining()
-			}
-			
+		if (orders.Peek().IsExpired()) {
+			orders.Dequeue();
 		}
-    }
+
+	}
+}
 
     public bool IsGrounded()
     {

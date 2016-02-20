@@ -2,14 +2,18 @@
 using System.Collections;
 
 public class Order : MonoBehaviour {
-	private int startTime;
+	private float startTime;
 	private Recipe recipe;
 	private Ingredient[] ingredients;
 	private int id;
 
+	public Order() {
+		this.startTime = Time.time; // Time.time = current time
+	}
+
 	// Use this for initialization
 	void Start () {
-		startTime = Time.time; // Time.time = current time
+		
 
 	}
 	
