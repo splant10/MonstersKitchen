@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         facingRight = true;
+        inventory = new Inventroy();
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
     }
