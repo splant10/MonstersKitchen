@@ -7,7 +7,8 @@ public class PlayerController : MonoBehaviour {
     public bool isGrounded;
     public bool isAttacking;
 
-    public Transform bottom;
+    public Transform bottomleft;
+    public Transform bottomright;
 
     private bool recentlyInteracted;
     private bool facingRight;
@@ -21,7 +22,6 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         facingRight = true;
-		inventory = new Inventroy ();
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
     }
@@ -99,7 +99,9 @@ public class PlayerController : MonoBehaviour {
     
     public bool IsGrounded()
     {
-        return Physics2D.Linecast(bottom.position, (Vector2)bottom.position + (0.1f * Vector2.down), LayerMask.GetMask("Ground"));
+        bool line_left = Physics2D.Linecast(bottomleft.position, (Vector2)bottomleft.position + (0.2f * Vector2.down), LayerMask.GetMask("Ground"));
+        bool line_right = Physics2D.Linecast(bottomright.position, (Vector2)bottomright.position + (0.2f * Vector2.down), LayerMask.GetMask("Ground"));
+        return (line_left || line_right);
     }
    
     public void Interact()
