@@ -5,7 +5,6 @@ public class Recipe : MonoBehaviour {
 
 	private int id;
 	private string name;
-	
 	private int timeLimit;
 	private int[] ingredients = new int[4];
 
