@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class PlayerController : MonoBehaviour {
     public float horizontalSpeed;
     public float jumpSpeed;
+    public bool isGrounded;
 
     public Transform bottom;
 
@@ -13,11 +14,16 @@ public class PlayerController : MonoBehaviour {
 
 	public Queue<Order> orders;
 
+    private Rigidbody2D rb2d;
+    private Animator anim;
+
 	// Use this for initialization
 	void Start () {
         orders = new Queue<Order>();
         facingRight = true;
-	}
+        rb2d = gameObject.GetComponent<Rigidbody2D>();
+        anim = gameObject.GetComponent<Animator>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -30,21 +36,28 @@ public class PlayerController : MonoBehaviour {
         { // move left
             horizVel = -horizontalSpeed;
             SetFacingRight(false);
-            animator.SetBool("isWalking", true);
+            anim.SetFloat("Speed", horizontalSpeed);
         } else if (Input.GetAxis("Horizontal") > 0)
         { // move right
             horizVel = horizontalSpeed;
             SetFacingRight(true);
-            animator.SetBool("isWalking", true);
+            anim.SetFloat("Speed", horizontalSpeed);
         } else
         {
-            animator.SetBool("isWalking", false);
+            anim.SetFloat("Speed", 0);
+        }
+        if (IsGrounded())
+        {
+            if (Input.GetAxis("Vertical") > 0)
+            {
+                vertVel = jumpSpeed;
+                anim.SetBool("isGrounded", false);
+            } else
+            {
+                anim.SetBool("isGrounded", true);
+            }
         }
 
-        if (Input.GetAxis("Vertical") > 0 && IsGrounded())
-        {
-            vertVel = jumpSpeed;
-        }
 
         if (Input.GetAxis("Fire2") != 0 && !recentlyInteracted)
         {
@@ -56,6 +69,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         rigidbody2D.velocity = new Vector2(horizVel, vertVel);
+        anim.SetFloat("VelY", vertVel);
 
 		if (orders.Count > 0 && orders.Peek().IsExpired()) {
 			orders.Dequeue();
