@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Recipe : MonoBehaviour {
+public class Recipe {
 
 	private int id;
 	private string name;
@@ -13,17 +13,6 @@ public class Recipe : MonoBehaviour {
 		this.name = name;
 		this.timeLimit = timeLimit;
 		this.ingredients = ingredients;
-	}
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
-		// 
 	}
 
 	public float GetTimeLimit() {

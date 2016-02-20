@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Order : MonoBehaviour {
+public class Order {
 	private float startTime;
 	private Recipe recipe;
 	private Ingredient.ID[] ingredients;
@@ -11,27 +11,13 @@ public class Order : MonoBehaviour {
 		this.recipe = newRecipe;
 		this.ingredients = newRecipe.ingredients;
 		this.id = 0;
+        startTime = Time.time;
 	}
 
-	// Use this for initialization
-	void Start () {
-		this.startTime = Time.time; // Time.time = current time
-
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-		// Display (startTime - Time.time) on the screen
-
-		// Check if all recipe ingredients are in the caludron
-		// if they are make the recipe bar green and make it disapear, Increment score
-	
-	}
 	public bool IsExpired (){
 		return (startTime - Time.time >= recipe.GetTimeLimit ());
 	}
+
 	public float TimeRemaining(){
 		return (startTime - Time.time);
 	}

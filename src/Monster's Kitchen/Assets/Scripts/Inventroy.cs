@@ -10,16 +10,5 @@ public class Inventroy {
 		for (int i = 0; i < capacity; ++i) {
 			ingredients[i] = null;
 		}
-
-	}
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 }
