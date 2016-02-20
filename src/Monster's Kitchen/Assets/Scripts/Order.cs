@@ -4,7 +4,7 @@ using System.Collections;
 public class Order {
 	private float startTime;
 	private Recipe recipe;
-	private Ingredient.ID[] ingredients;
+	public Ingredient.ID[] ingredients;
 	private int id;
 
 	public Order(Recipe newRecipe) {
