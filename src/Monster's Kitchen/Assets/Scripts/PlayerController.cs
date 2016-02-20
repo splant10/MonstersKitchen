@@ -38,6 +38,16 @@ public class PlayerController : MonoBehaviour {
 
     public bool IsGrounded()
     {
-        return Physics2D.Linecast(bottom.position, (Vector2)bottom.position + (0.01f * Vector2.down));
+        return Physics2D.Linecast(bottom.position, (Vector2)bottom.position + (0.1f * Vector2.down));
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Rigidbody2D rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
+
+        if (other.gameObject.layer.ToString().Equals("Ground"))
+        {
+            onGround = true;
+        }
     }
 }
