@@ -35,12 +35,18 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetAxis("Horizontal") < 0)
         { // move left
             horizVel = -horizontalSpeed;
-            SetFacingRight(false);
+            if (facingRight)
+            {
+                SetFacingRight(false);
+            }
             anim.SetFloat("Speed", horizontalSpeed);
         } else if (Input.GetAxis("Horizontal") > 0)
         { // move right
             horizVel = horizontalSpeed;
-            SetFacingRight(true);
+            if (!facingRight)
+            {
+                SetFacingRight(true);
+            }
             anim.SetFloat("Speed", horizontalSpeed);
         } else
         {
@@ -76,20 +82,21 @@ public class PlayerController : MonoBehaviour {
 		}
 
 	}
-
+    
     public void SetFacingRight(bool flag)
     {
         facingRight = flag;
-        Animator animator = GetComponentInChildren<Animator>();
-        Vector2 scale = animator.transform.localScale;
-        scale = new Vector2(scale.x, -scale.y);
+        // Multiply the player's x local scale by -1
+        Vector2 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
     }
-
+    
     public bool IsGrounded()
     {
         return Physics2D.Linecast(bottom.position, (Vector2)bottom.position + (0.1f * Vector2.down), LayerMask.GetMask("Ground"));
     }
-
+   
     public void Interact()
     {
         foreach (RaycastHit2D cast in Physics2D.LinecastAll(gameObject.transform.position, gameObject.transform.position))
