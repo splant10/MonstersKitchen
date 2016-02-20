@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class OrderList : MonoBehaviour {
 	public Queue <Order> orders;
 	public float timeLimit;
+    public OrderBlock[] orderBlocks;
 
 	public OrderList(){
 		orders = new Queue<Order>();
@@ -26,6 +27,8 @@ public class OrderList : MonoBehaviour {
 	}
 
 	public void AddOrder(Order order){
+        Debug.Log("Adding order, " + orderBlocks.Length + " blocks found");
+        orderBlocks[orders.Count].SetOrder(order);
 		orders.Enqueue(order);
 	}
 
