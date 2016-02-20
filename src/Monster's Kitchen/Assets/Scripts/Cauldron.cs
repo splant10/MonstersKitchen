@@ -7,6 +7,7 @@ public class Cauldron : MonoBehaviour, Interactable {
     public void Interact(GameObject interactor)
     {
 		//handles Order Completion
+		Debug.Log("Yo, we haven't implemented cooking yet.");
 
 		Order order = interactor.GetComponent<PlayerController> ().listOfOrders.orders.Peek();
 		List<Ingredient> inventory = interactor.GetComponent<PlayerController> ().inventory.ingredients;
@@ -25,7 +26,6 @@ public class Cauldron : MonoBehaviour, Interactable {
 
 		}
 
-		Debug.Log("Yo, we haven't implemented cooking yet.");
     }
 
     // Use this for initialization
