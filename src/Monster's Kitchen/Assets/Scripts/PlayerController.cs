@@ -52,7 +52,6 @@ public class PlayerController : MonoBehaviour {
 		}
 
 	}
-}
 
     public bool IsGrounded()
     {

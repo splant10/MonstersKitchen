@@ -29,7 +29,7 @@ public class Order : MonoBehaviour {
 	public bool IsExpired (){
 		return (startTime - Time.time >= recipe.GetTimeLimit ());
 	}
-	public int TimeRemaining(){
-		return (startTime -Time.time)
+	public float TimeRemaining(){
+		return (startTime - Time.time);
 	}
 }
