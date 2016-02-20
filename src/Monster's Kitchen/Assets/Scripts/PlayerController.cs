@@ -30,12 +30,29 @@ public class PlayerController : MonoBehaviour {
         {
             vertVel = jumpSpeed;
         }
+
+        if (Input.GetAxis("Fire2") != 0)
+        {
+            Interact();
+        }
+
         rigidbody2D.velocity = new Vector2(horizVel, vertVel);
     }
 
     public bool IsGrounded()
     {
         return Physics2D.Linecast(bottom.position, (Vector2)bottom.position + (0.1f * Vector2.down), LayerMask.GetMask("Ground"));
+    }
 
+    public void Interact()
+    {
+        foreach (RaycastHit2D cast in Physics2D.LinecastAll(gameObject.transform.position, gameObject.transform.position))
+        {
+            try
+            {
+                Interactable interactable = cast.collider.gameObject.GetComponent<Interactable>();
+                interactable.Interact(gameObject);
+            } catch (MissingReferenceException e) {}
+        }
     }
 }
