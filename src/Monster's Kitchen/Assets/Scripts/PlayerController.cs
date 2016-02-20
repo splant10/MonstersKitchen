@@ -9,26 +9,36 @@ public class PlayerController : MonoBehaviour {
     public Transform bottom;
 
     private bool recentlyInteracted;
+    private bool facingRight;
 
 	public Queue<Order> orders;
 
 	// Use this for initialization
 	void Start () {
         orders = new Queue<Order>();
+        facingRight = true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         Rigidbody2D rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
+        Animator animator = GetComponentInChildren<Animator>();
         float vertVel = rigidbody2D.velocity.y;
         float horizVel = 0.0f;
 
         if (Input.GetAxis("Horizontal") < 0)
         { // move left
             horizVel = -horizontalSpeed;
+            SetFacingRight(false);
+            animator.SetBool("isWalking", true);
         } else if (Input.GetAxis("Horizontal") > 0)
         { // move right
             horizVel = horizontalSpeed;
+            SetFacingRight(true);
+            animator.SetBool("isWalking", true);
+        } else
+        {
+            animator.SetBool("isWalking", false);
         }
 
         if (Input.GetAxis("Vertical") > 0 && IsGrounded())
@@ -52,6 +62,14 @@ public class PlayerController : MonoBehaviour {
 		}
 
 	}
+
+    public void SetFacingRight(bool flag)
+    {
+        facingRight = flag;
+        Animator animator = GetComponentInChildren<Animator>();
+        Vector2 scale = animator.transform.localScale;
+        scale = new Vector2(scale.x, -scale.y);
+    }
 
     public bool IsGrounded()
     {
