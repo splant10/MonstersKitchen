@@ -4,16 +4,19 @@ using System.Collections;
 public class Order : MonoBehaviour {
 	private float startTime;
 	private Recipe recipe;
-	private Ingredient[] ingredients;
+	private Ingredient.ID[] ingredients;
 	private int id;
 
-	public Order() {
-		this.startTime = Time.time; // Time.time = current time
+	public Order(Recipe newRecipe) {
+		this.recipe = newRecipe;
+		this.ingredients = newRecipe.ingredients;
+		this.id = 0;
 	}
 
 	// Use this for initialization
 	void Start () {
-		
+		this.startTime = Time.time; // Time.time = current time
+
 
 	}
 	

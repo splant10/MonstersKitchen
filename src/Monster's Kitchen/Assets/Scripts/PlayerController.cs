@@ -69,4 +69,8 @@ public class PlayerController : MonoBehaviour {
             }
         }
     }
+
+	public void AddOrder(Order order){
+		orders.Enqueue (order);
+	}
 }

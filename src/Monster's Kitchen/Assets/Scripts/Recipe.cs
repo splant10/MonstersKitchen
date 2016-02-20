@@ -5,10 +5,10 @@ public class Recipe : MonoBehaviour {
 
 	private int id;
 	private string name;
-	private int timeLimit;
-	private int[] ingredients = new int[4];
+	private float timeLimit;
+	public Ingredient.ID[] ingredients;
 
-	public Recipe (int id, string name, int timeLimit, int[] ingredients) {
+	public Recipe (int id, string name, int timeLimit, Ingredient.ID[] ingredients) {
 		this.id = id;
 		this.name = name;
 		this.timeLimit = timeLimit;
@@ -26,7 +26,7 @@ public class Recipe : MonoBehaviour {
 		// 
 	}
 
-	public int GetTimeLimit() {
+	public float GetTimeLimit() {
 		return timeLimit;
 	}
 }

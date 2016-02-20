@@ -1,23 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Ingredient : MonoBehaviour {
+public class Ingredient {
 
-	private int id;
+	private ID id;
 	private string name;
-	
-	public Ingredient (int id, string name) {
+
+	public enum ID {FLOUR, SUGAR, EGGS}
+
+	public Ingredient (ID id, string name) {
 		this.id = id;
 		this.name = name;
 	}
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	bool IsFlour() {
+		return id == ID.FLOUR;
 	}
 }
