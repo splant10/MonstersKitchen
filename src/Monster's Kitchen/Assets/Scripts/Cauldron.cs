@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using System;
 
 public class Cauldron : MonoBehaviour, Interactable {
@@ -7,8 +8,24 @@ public class Cauldron : MonoBehaviour, Interactable {
     {
 		//handles Order Completion
 
-//	Checks if recipe and inventory match  if (interactor.GetComponent<PlayerController>().ListOfOrders.
-        Debug.Log("Yo, we haven't implemented cooking yet.");
+		Order order = interactor.GetComponent<PlayerController> ().listOfOrders.orders.Peek();
+		List<Ingredient> inventory = interactor.GetComponent<PlayerController> ().inventory.ingredients;
+		int numCorrectIDs = 0;
+
+		foreach (Ingredient.ID id in order.ingredients){
+			if (inventory.Contains (id)) {
+				numCorrectIDs += 1;
+			}
+			if (numCorrectIDs == order.ingredients) {
+				// Order is Correct do something
+
+				// Remove Order from Queue
+				interactor.GetComponent<PlayerController>().listOfOrders.orders.Dequeue();
+			}
+
+		}
+
+		Debug.Log("Yo, we haven't implemented cooking yet.");
     }
 
     // Use this for initialization
