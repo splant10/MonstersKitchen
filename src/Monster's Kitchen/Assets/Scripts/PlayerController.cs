@@ -37,6 +37,8 @@ public class PlayerController : MonoBehaviour {
         }
 
         rigidbody2D.velocity = new Vector2(horizVel, vertVel);
+
+        Debug.Log(gameObject.transform.position);
     }
 
     public bool IsGrounded()
@@ -48,11 +50,11 @@ public class PlayerController : MonoBehaviour {
     {
         foreach (RaycastHit2D cast in Physics2D.LinecastAll(gameObject.transform.position, gameObject.transform.position))
         {
-            try
+            Interactable interactable = cast.collider.gameObject.GetComponent<Interactable>();
+            if (interactable != null)
             {
-                Interactable interactable = cast.collider.gameObject.GetComponent<Interactable>();
                 interactable.Interact(gameObject);
-            } catch (MissingReferenceException e) {}
+            }
         }
     }
 }
