@@ -29,7 +29,7 @@ public class OrderCreater : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (lastOrderTime + 3 < Time.time)
+		if (lastOrderTime + timeBetweenOrders < Time.time)
         {
             orderList.AddOrder(OrderAlgorithm());
             lastOrderTime = Time.time;
