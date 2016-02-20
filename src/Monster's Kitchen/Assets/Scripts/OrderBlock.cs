@@ -4,13 +4,19 @@ using System.Collections;
 
 public class OrderBlock : MonoBehaviour {
     private Order order;
-    public Text text;
+    public Text orderNameText;
+    public Text ingredientsText;
 
     public void SetOrder(Order order)
     {
         this.order = order;
-        text.text = order.ToString() ;
-        Debug.Log(text.text);
+        orderNameText.text = order.ToString();
+        ingredientsText.text = "";
+        foreach (Ingredient.ID id in order.ingredients)
+        {
+            ingredientsText.text += Ingredient.Name(id) + "\n";
+        }
+        Debug.Log(orderNameText.text);
     }
 
 	// Use this for initialization
