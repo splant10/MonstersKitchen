@@ -7,6 +7,7 @@ public class Recipe : MonoBehaviour {
 	private string name;
 	private int timeLimit;
 	private int[] ingredients = new int[4];
+	private int startTime;
 
 	public Recipe (int id, string name, int timeLimit, int[] ingredients) {
 		this.id = id;
@@ -17,11 +18,19 @@ public class Recipe : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (startTime - Time.time >= this.timeLimit) {
+			// call some timeout function
+		}
+		// Display (startTime - Time.time) on the screen
+
+		// Check if all recipe ingredients are in the caludron
+			// if they are make the recipe bar green and make it disapear, Increment score
+
+		// 
 	}
 }

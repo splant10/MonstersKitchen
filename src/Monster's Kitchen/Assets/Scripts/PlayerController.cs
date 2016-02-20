@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour {
     public float horizontalSpeed;
@@ -8,6 +9,8 @@ public class PlayerController : MonoBehaviour {
     public Transform bottom;
 
     private bool recentlyInteracted;
+
+	public Queue <Order> orders;
 
 	// Use this for initialization
 	void Start () {
@@ -43,6 +46,17 @@ public class PlayerController : MonoBehaviour {
         }
 
         rigidbody2D.velocity = new Vector2(horizVel, vertVel);
+
+		foreach (Order order in orders) {
+			if (order.IsExpired ()) {
+				order = null;
+
+			}
+			else { 
+				order.TimeRemaining()
+			}
+			
+		}
     }
 
     public bool IsGrounded()
