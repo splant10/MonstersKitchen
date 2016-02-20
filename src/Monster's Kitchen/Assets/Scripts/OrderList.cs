@@ -8,8 +8,6 @@ public class OrderList : MonoBehaviour {
 
 	public OrderList(){
 		orders = new Queue<Order>();
-		timeLimit = orders.Dequeue ().TimeRemaining();
-
 	}
 
 	// Use this for initialization
@@ -28,7 +26,7 @@ public class OrderList : MonoBehaviour {
 	}
 
 	public void AddOrder(Order order){
-		orders.Enqueue (order);
+		orders.Enqueue(order);
 	}
 
 }

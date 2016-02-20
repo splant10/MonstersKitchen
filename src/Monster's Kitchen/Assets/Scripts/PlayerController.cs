@@ -27,8 +27,7 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Rigidbody2D rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
-        Animator animator = GetComponentInChildren<Animator>();
+        Rigidbody2D rigidbody2D = GetComponent<Rigidbody2D>();
         float vertVel = rigidbody2D.velocity.y;
         float horizVel = 0.0f;
 
@@ -80,7 +79,6 @@ public class PlayerController : MonoBehaviour {
 
         rigidbody2D.velocity = new Vector2(horizVel, vertVel);
         anim.SetFloat("VelY", vertVel);
-
 	}
     
     public void SetFacingRight(bool flag)
