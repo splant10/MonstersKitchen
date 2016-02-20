@@ -21,7 +21,6 @@ public class OrderList : MonoBehaviour {
 	void Update () {
 		foreach (Order order in orders) {
             timeLimit = order.TimeRemaining();
-            Debug.Log("Time remaining: " + timeLimit);
 		}
 	
 	}

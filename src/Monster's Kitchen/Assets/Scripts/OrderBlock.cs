@@ -16,7 +16,6 @@ public class OrderBlock : MonoBehaviour {
         {
             ingredientsText.text += Ingredient.Name(id) + "\n";
         }
-        Debug.Log(orderNameText.text);
     }
 
 	// Use this for initialization
