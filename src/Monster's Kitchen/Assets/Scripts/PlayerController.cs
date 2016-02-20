@@ -10,11 +10,11 @@ public class PlayerController : MonoBehaviour {
 
     private bool recentlyInteracted;
 
-	public Queue <Order> orders;
+	public Queue<Order> orders;
 
 	// Use this for initialization
 	void Start () {
-
+        orders = new Queue<Order>();
 	}
 	
 	// Update is called once per frame
@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour {
 
         rigidbody2D.velocity = new Vector2(horizVel, vertVel);
 
-		if (orders.Peek().IsExpired()) {
+		if (orders.Count > 0 && orders.Peek().IsExpired()) {
 			orders.Dequeue();
 		}
 
