@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class OrderCreater : MonoBehaviour {
 	public Recipe[] allRecipes; 
@@ -10,7 +11,7 @@ public class OrderCreater : MonoBehaviour {
 
 	public OrderCreater(){
 		allRecipes = new Recipe[1];
-		Ingredient.ID[] ingredientIDs = {Ingredient.ID.FLOUR, Ingredient.ID.SUGAR, Ingredient.ID.EGGS};
+		List<Ingredient.ID> ingredientIDs = new List<Ingredient.ID>(new Ingredient.ID[]{Ingredient.ID.FLOUR, Ingredient.ID.SUGAR, Ingredient.ID.EGGS});
 		allRecipes[0] = new Recipe(0, "CauldronCakes", 30, ingredientIDs);
 	}
 	// Use this for initialization

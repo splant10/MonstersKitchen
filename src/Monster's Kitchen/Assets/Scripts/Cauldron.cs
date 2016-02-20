@@ -10,14 +10,14 @@ public class Cauldron : MonoBehaviour, Interactable {
 		Debug.Log("Yo, we haven't implemented cooking yet.");
 
 		Order order = interactor.GetComponent<PlayerController> ().listOfOrders.orders.Peek();
-		List<Ingredient> inventory = interactor.GetComponent<PlayerController> ().inventory.ingredients;
+		List<Ingredient.ID> inventory = interactor.GetComponent<PlayerController> ().inventory.ingredients;
 		int numCorrectIDs = 0;
 
-		foreach (Ingredient.ID id in order.ingredients){
-			if (inventory.Contains (id)) {
+		for (int i = 0; i < order.ingredients.Count; ++i){
+			if (interactor.GetComponent<PlayerController> ().inventory.Contains(order.ingredients[i])) {
 				numCorrectIDs += 1;
 			}
-			if (numCorrectIDs == order.ingredients) {
+			if (numCorrectIDs == order.ingredients.Count) {
 				// Order is Correct do something
 
 				// Remove Order from Queue

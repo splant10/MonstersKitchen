@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class IngredientContainers : MonoBehaviour, Interactable {
-	public Ingredient ingredient;
+	public Ingredient.ID ingredient;
 
 	public void Interact(GameObject interactor){
 		// give interactor inventory one ingredient
@@ -13,7 +13,7 @@ public class IngredientContainers : MonoBehaviour, Interactable {
 				// TODO
 				break;
 			}
-			if (interactor.GetComponent<PlayerController>().inventory.ingredients[i] == null) {
+			if (interactor.GetComponent<PlayerController>().inventory.ingredients[i] == Ingredient.ID.NONE) {
 				interactor.GetComponent<PlayerController>().inventory.ingredients[i] = ingredient;
 				Debug.Log ("added ingredient to inventory");
 				break;

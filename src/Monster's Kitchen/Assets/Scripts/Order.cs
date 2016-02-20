@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Order {
 	private float startTime;
 	private Recipe recipe;
-	public Ingredient.ID[] ingredients;
+	public List<Ingredient.ID> ingredients;
 	private int id;
 
 	public Order(Recipe newRecipe) {

@@ -6,7 +6,7 @@ public class Ingredient {
 	private ID id;
 	private string name;
 
-	public enum ID {FLOUR, SUGAR, EGGS}
+	public enum ID {NONE, FLOUR, SUGAR, EGGS}
 
 	public Ingredient (ID id, string name) {
 		this.id = id;
