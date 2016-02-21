@@ -67,7 +67,8 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
-		// handles order expiration
+        // handles order expiration
+        print(listOfOrders.IsEmpty());
 		if (!listOfOrders.IsEmpty() && listOfOrders.Peek().IsExpired()) {
 			listOfOrders.PopOrder();
 		}

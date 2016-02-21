@@ -55,7 +55,7 @@ public class OrderList : MonoBehaviour {
 
     public bool IsEmpty()
     {
-        return orders.Count > 0;
+        return orders.Count == 0;
     }
 
 }
