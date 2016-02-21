@@ -8,8 +8,10 @@ public class Cauldron : MonoBehaviour, Interactable {
     {
 		//handles Order Completion
 		Debug.Log("Yo, we haven't implemented cooking yet.");
-		if (interactor.GetComponent<PlayerController> ().listOfOrders.orders.Count > 0) {
-			Order order = interactor.GetComponent<PlayerController> ().listOfOrders.orders.Peek ();
+        OrderList orderList = interactor.GetComponent<PlayerController>().listOfOrders;
+
+		if (!orderList.IsEmpty()) {
+			Order order = orderList.Peek ();
 		
 			List<Ingredient.ID> inventory = interactor.GetComponent<PlayerController> ().inventory.ingredients;
 			int numCorrectIDs = 0;
@@ -22,7 +24,7 @@ public class Cauldron : MonoBehaviour, Interactable {
 					// Order is Correct do something
 
 					// Remove Order from Queue
-					interactor.GetComponent<PlayerController> ().listOfOrders.orders.Dequeue ();
+					orderList.PopOrder();
 				}
 
 			}
