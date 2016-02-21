@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:src/Monster's Kitchen/Assets/art/chicken.png.meta
 guid: b1469ca1e78a0004c9f1aed494fd687b
 timeCreated: 1456020334
+=======
+guid: aa99033540ae33d4caf786a00a61a43b
+timeCreated: 1456020339
+>>>>>>> dbdc13e88660fed5c1d0b6d81cbc05b8480d89fc:src/Monster's Kitchen/Assets/art/chicken.png.meta
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}

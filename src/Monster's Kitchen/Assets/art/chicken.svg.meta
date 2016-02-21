@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:src/Monster's Kitchen/Assets/art/chicken.svg.meta
 guid: c4b5b6d5094261f4582bf5ed61e185fc
 timeCreated: 1456020330
+=======
+guid: 83973567ae44aa2469145e7fb149371a
+timeCreated: 1456020336
+>>>>>>> dbdc13e88660fed5c1d0b6d81cbc05b8480d89fc:src/Monster's Kitchen/Assets/art/chicken.svg.meta
 licenseType: Free
 DefaultImporter:
   userData: 
