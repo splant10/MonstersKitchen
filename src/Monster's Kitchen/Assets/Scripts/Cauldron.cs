@@ -30,7 +30,10 @@ public class Cauldron : MonoBehaviour, Interactable {
 				}
 				if (order.Complete()) {
                     // Remove Order from Queue
-                    orderCompletedCount += 1;
+                    if (!order.IsExpired())
+                    {
+                        orderCompletedCount += 1;
+                    }
 					orderList.PopOrder();
                     print("Completed order: " + order);
                     hudCount.text = "Orders Completed: " + orderCompletedCount.ToString();
