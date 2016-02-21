@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 
 public class Inventroy {
-	public int capacity = 4;
+	public int capacity = 10;
 	private List<Ingredient> ingredients;
 
 	public Inventroy(){

@@ -17,6 +17,7 @@ public class Monster : MonoBehaviour, Attackable, Interactable {
         if (!isAlive)
         {
             interactor.GetComponent<PlayerController>().inventory.Add(new Ingredient(ingredient));
+            Destroy(gameObject);
         }
     }
 
