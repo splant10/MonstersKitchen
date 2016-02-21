@@ -17,8 +17,8 @@ PlayerSettings:
   m_VirtualRealitySplashScreen: {fileID: 0}
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
-  defaultScreenWidthWeb: 1024
-  defaultScreenHeightWeb: 768
+  defaultScreenWidthWeb: 960
+  defaultScreenHeightWeb: 600
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   m_ActiveColorSpace: 0
@@ -37,7 +37,7 @@ PlayerSettings:
   useOSAutorotation: 1
   use32BitDisplayBuffer: 1
   disableDepthAndStencilBuffers: 0
-  defaultIsFullScreen: 0
+  defaultIsFullScreen: 1
   defaultIsNativeResolution: 1
   runInBackground: 0
   captureSingleScreen: 0
@@ -332,7 +332,6 @@ PlayerSettings:
   spritePackerPolicy: 
   scriptingDefineSymbols:
     1: BackGround
-    2: Toad
   metroPackageName: Monster's Kitchen
   metroPackageVersion: 
   metroCertificatePath: 
