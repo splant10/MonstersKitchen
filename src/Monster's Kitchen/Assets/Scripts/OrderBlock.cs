@@ -6,6 +6,7 @@ public class OrderBlock : MonoBehaviour {
     private Order order;
     public Text orderNameText;
     public Text ingredientsText;
+    public Text timeRemainingText;
 
     public void SetOrder(Order order)
     {
@@ -18,10 +19,12 @@ public class OrderBlock : MonoBehaviour {
             {
                 ingredientsText.text += Ingredient.Name(id) + "\n";
             }
+            timeRemainingText.text = string.Format("{0:f2}s", order.TimeRemaining());
         } else
         {
             orderNameText.text = "";
             ingredientsText.text = "";
+            timeRemainingText.text = "";
         }
     }
 
@@ -32,6 +35,9 @@ public class OrderBlock : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+        if (order != null)
+        {
+            timeRemainingText.text = string.Format("{0:f2}s", order.TimeRemaining());
+        }
+    }
 }

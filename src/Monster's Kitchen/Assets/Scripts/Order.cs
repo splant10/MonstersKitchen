@@ -20,7 +20,7 @@ public class Order {
 	}
 
 	public float TimeRemaining(){
-		return (startTime - Time.time);
+		return ((recipe.GetTimeLimit() + startTime) - Time.time);
 	}
 
     public override string ToString()
