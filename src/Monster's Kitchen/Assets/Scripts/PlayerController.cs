@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
     public Transform bottomright;
 
     private bool recentlyInteracted;
+    private bool recentlyInteractedCanv;
     private bool facingRight;
 
 	public OrderList listOfOrders;
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour {
 
     private Rigidbody2D rb2d;
     private Animator anim;
+    public Canvas canv;
 
 	// Use this for initialization
 	void Start () {
@@ -25,6 +27,7 @@ public class PlayerController : MonoBehaviour {
         inventory = new Inventroy();
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
+        canv.enabled = true;
     }
 	
 	// Update is called once per frame
@@ -71,18 +74,29 @@ public class PlayerController : MonoBehaviour {
 		if (!listOfOrders.IsEmpty() && listOfOrders.Peek().IsExpired()) {
 			listOfOrders.PopOrder();
 		}
-        if (Input.GetAxis("Fire1") != 0/* && !recentlyInteracted*/)
+        if (Input.GetAxis("Fire1") != 0)
         {
             // Interact();
             anim.SetBool("isAttacking", true);
         }
+
         if (Input.GetAxis("Fire2") != 0 && !recentlyInteracted)
         {
             Interact();
             recentlyInteracted = true;
-        } else if (Input.GetAxis("Fire2") == 0)
+        }
+        else if (Input.GetAxis("Fire2") == 0)
         {
             recentlyInteracted = false;
+        }
+        if (Input.GetAxis("Fire3") != 0 && !recentlyInteractedCanv)
+        {
+            canv.enabled = !canv.enabled;
+            recentlyInteractedCanv = true;
+        }
+        else if (Input.GetAxis("Fire3") == 0)
+        {
+            recentlyInteractedCanv = false;
         }
 
         rigidbody2D.velocity = new Vector2(horizVel, vertVel);
