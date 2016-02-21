@@ -21,6 +21,7 @@ public class MonsterSpawner : MonoBehaviour, DoorListener {
         {
             monster = Instantiate(toSpawn);
             monster.transform.position = gameObject.transform.position;
+            monster.transform.localScale = gameObject.transform.localScale;
             monster.transform.SetParent(gameObject.transform);
             return true;
         }
