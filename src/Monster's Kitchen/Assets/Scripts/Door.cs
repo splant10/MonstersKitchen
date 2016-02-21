@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using System;
 
 public class Door : MonoBehaviour, Interactable {
@@ -7,6 +8,8 @@ public class Door : MonoBehaviour, Interactable {
     public Transform cameraDestination;
     public bool lockObjectZ;
     public bool lockCameraZ;
+
+    private List<DoorListener> listeners;
 
     public void Interact(GameObject interactor)
     {
@@ -29,15 +32,30 @@ public class Door : MonoBehaviour, Interactable {
             cameraZ = GameObject.Find("Main Camera").transform.position.z;
         }
         GameObject.Find("Main Camera").transform.position = new Vector3(cameraX, cameraY, cameraZ);
+
+        foreach (DoorListener listener in listeners)
+        {
+            listener.OnDoor(this);
+        }
+    }
+
+    void Awake()
+    {
+        listeners = new List<DoorListener>();
     }
 
     // Use this for initialization
     void Start () {
-	
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
+
+    public void AddListener(DoorListener listener)
+    {
+        listeners.Add(listener);
+    }
 }
