@@ -21,7 +21,7 @@ public class Order {
 	}
 
 	public bool IsExpired (){
-		return (startTime - Time.time >= recipe.GetTimeLimit ());
+		return (TimeRemaining() <=0 );
 	}
 
 	public float TimeRemaining(){
