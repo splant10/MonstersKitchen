@@ -168,6 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredient: 7
   deathSound: {fileID: 8300000, guid: ce2fd56c4e36f5b4783ff40b3436ecc1, type: 3}
+  pickupSound: {fileID: 8300000, guid: 8bba0c8ee17aa844c83a1f9524bb9d7f, type: 3}
 --- !u!212 &21259974
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -234,6 +235,10 @@ Prefab:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 8bba0c8ee17aa844c83a1f9524bb9d7f, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 169628}

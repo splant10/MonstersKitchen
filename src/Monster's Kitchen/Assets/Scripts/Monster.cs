@@ -6,13 +6,22 @@ public class Monster : MonoBehaviour, Attackable, Interactable {
     private bool isAlive;
     public Ingredient.ID ingredient;
     public AudioClip deathSound;
+    public AudioClip pickupSound;
+    private AudioSource source;
+
+    // Use this for initialization
+    void Start()
+    {
+        isAlive = true;
+        source = gameObject.GetComponent<AudioSource>();
+    }
+
 
     public void Attack(GameObject attacker)
     {
         gameObject.GetComponent<Animator>().SetBool("isAlive", false);
         if (isAlive)
         {
-            AudioSource source = gameObject.GetComponent<AudioSource>();
             source.PlayOneShot(deathSound);
         }
         isAlive = false;
@@ -23,15 +32,11 @@ public class Monster : MonoBehaviour, Attackable, Interactable {
         if (!isAlive)
         {
             interactor.GetComponent<PlayerController>().inventory.Add(new Ingredient(ingredient));
+            source.PlayOneShot(pickupSound);
             Destroy(gameObject);
         }
     }
 
-    // Use this for initialization
-    void Start () {
-        isAlive = true;
-	}
-	
 	// Update is called once per frame
 	void Update () {
 	
