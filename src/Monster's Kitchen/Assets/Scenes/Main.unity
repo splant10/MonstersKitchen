@@ -536,13 +536,17 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 117281402}
     m_Modifications:
+    - target: {fileID: 11485602, guid: 21c4aa3bcf58b4f4386227d3b4ea7873, type: 2}
+      propertyPath: doorsToCauseSpawn.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 466028, guid: 21c4aa3bcf58b4f4386227d3b4ea7873, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: -6.4
       objectReference: {fileID: 0}
     - target: {fileID: 466028, guid: 21c4aa3bcf58b4f4386227d3b4ea7873, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3.24
       objectReference: {fileID: 0}
     - target: {fileID: 466028, guid: 21c4aa3bcf58b4f4386227d3b4ea7873, type: 2}
       propertyPath: m_LocalPosition.z
@@ -570,8 +574,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 123800, guid: 21c4aa3bcf58b4f4386227d3b4ea7873, type: 2}
       propertyPath: m_Name
-      value: Frog
+      value: ToadSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 11485602, guid: 21c4aa3bcf58b4f4386227d3b4ea7873, type: 2}
+      propertyPath: toSpawn
+      value: 
+      objectReference: {fileID: 11492658, guid: dc7be05a167f558459fd7e88bb2e1a3b,
+        type: 2}
+    - target: {fileID: 11485602, guid: 21c4aa3bcf58b4f4386227d3b4ea7873, type: 2}
+      propertyPath: doorsToCauseSpawn.Array.data[0]
+      value: 
+      objectReference: {fileID: 936092848}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 21c4aa3bcf58b4f4386227d3b4ea7873, type: 2}
   m_IsPrefabParent: 0
@@ -579,53 +592,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 466028, guid: 21c4aa3bcf58b4f4386227d3b4ea7873, type: 2}
   m_PrefabInternal: {fileID: 204164842}
---- !u!1001 &263845288
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 430970, guid: e047af63df5967b4ba575ca4d21a49b6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 430970, guid: e047af63df5967b4ba575ca4d21a49b6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 430970, guid: e047af63df5967b4ba575ca4d21a49b6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 430970, guid: e047af63df5967b4ba575ca4d21a49b6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 430970, guid: e047af63df5967b4ba575ca4d21a49b6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 430970, guid: e047af63df5967b4ba575ca4d21a49b6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 430970, guid: e047af63df5967b4ba575ca4d21a49b6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 430970, guid: e047af63df5967b4ba575ca4d21a49b6, type: 2}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 21285078, guid: e047af63df5967b4ba575ca4d21a49b6, type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 516a89614e117764f8e3c7c1d670bdd0,
-        type: 3}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: e047af63df5967b4ba575ca4d21a49b6, type: 2}
-  m_IsPrefabParent: 0
 --- !u!114 &310464909 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11462738, guid: f71d6c6a1b921754bab2096f1d7d44f6,
@@ -1597,6 +1563,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1707493214}
   m_RootOrder: 3
+--- !u!114 &936092848 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11462738, guid: f71d6c6a1b921754bab2096f1d7d44f6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1311805427}
+  m_Script: {fileID: 11500000, guid: 885f826a3408ebe48917f37c9c4bb953, type: 3}
 --- !u!1001 &939996933
 Prefab:
   m_ObjectHideFlags: 0
@@ -3006,6 +2978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ff1d3711e5bdde4ea93ae4ce5f35993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hudCount: {fileID: 0}
 --- !u!95 &1881045714
 Animator:
   serializedVersion: 3
