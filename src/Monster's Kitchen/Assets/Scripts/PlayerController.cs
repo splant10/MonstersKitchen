@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
     public float horizontalSpeed;
@@ -21,8 +22,11 @@ public class PlayerController : MonoBehaviour {
     private Animator anim;
     public Canvas canv;
 
-	// Use this for initialization
-	void Start () {
+    private int ordersFailedCount;
+    public Text hudFailedCount;
+
+    // Use this for initialization
+    void Start () {
         facingRight = true;
         inventory = new Inventroy();
         rb2d = gameObject.GetComponent<Rigidbody2D>();
@@ -32,6 +36,14 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        Order order = listOfOrders.Peek();
+        if (order.IsExpired())
+        {
+            ordersFailedCount += 1;
+            hudFailedCount.text = "Orders Failed: " + ordersFailedCount.ToString();
+        }
+
         Rigidbody2D rigidbody2D = GetComponent<Rigidbody2D>();
         float vertVel = rigidbody2D.velocity.y;
         float horizVel = 0.0f;
