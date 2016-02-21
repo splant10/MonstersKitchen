@@ -10,12 +10,12 @@ public class Monster : MonoBehaviour, Attackable, Interactable {
     public void Attack(GameObject attacker)
     {
         gameObject.GetComponent<Animator>().SetBool("isAlive", false);
-        isAlive = false;
-        if (!isAlive)
+        if (isAlive)
         {
             AudioSource source = gameObject.GetComponent<AudioSource>();
             source.PlayOneShot(deathSound);
         }
+        isAlive = false;
     }
 
     public void Interact(GameObject interactor)
