@@ -1,7 +1,7 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monster's Kitchen.CSharp", "Monster's Kitchen.CSharp.csproj", "{F1932782-BBBA-1F03-5E95-862C8D6A076E}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{58D6018B-4C48-E87E-DB61-CEB32B9FA35B}") = "Monster's Kitchen", "Assembly-CSharp.csproj", "{DB5280A3-C27A-CA1B-F972-484A104FE3D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F1932782-BBBA-1F03-5E95-862C8D6A076E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F1932782-BBBA-1F03-5E95-862C8D6A076E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F1932782-BBBA-1F03-5E95-862C8D6A076E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F1932782-BBBA-1F03-5E95-862C8D6A076E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB5280A3-C27A-CA1B-F972-484A104FE3D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB5280A3-C27A-CA1B-F972-484A104FE3D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB5280A3-C27A-CA1B-F972-484A104FE3D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB5280A3-C27A-CA1B-F972-484A104FE3D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
