@@ -11,8 +11,10 @@ public class OrderCreater : MonoBehaviour {
 
     public float timeBetweenOrders;
     public float firstOrderTime;
+    public AudioClip orderUpSound;
+    public AudioSource source;
 
-	public OrderCreater(){
+    public OrderCreater(){
 
 		allRecipes = new Recipe[5];
 		List<Ingredient.ID> ingredientIDs;
@@ -41,10 +43,15 @@ public class OrderCreater : MonoBehaviour {
 		allRecipes [4] = new Recipe (4, "Spider Eye pudding", 30, ingredientIDs);
 
 	}
-	// Use this for initialization
-	void Start () {
+
+    void Awake()
+    {
+        source =  GameObject.Find("DinnerChime").GetComponent<AudioSource>();
+    }
+    // Use this for initialization
+    void Start () {
         lastOrderTime = Time.time  - (timeBetweenOrders - firstOrderTime);
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -52,6 +59,8 @@ public class OrderCreater : MonoBehaviour {
         {
             orderList.AddOrder(OrderAlgorithm());
             lastOrderTime = Time.time;
+            // Play DING!
+            source.PlayOneShot(orderUpSound);
         }
 	}
 

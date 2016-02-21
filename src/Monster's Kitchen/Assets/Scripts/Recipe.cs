@@ -7,7 +7,7 @@ public class Recipe {
 	private int id;
 	private string name;
 	private float timeLimit;
-	public List<Ingredient.ID> ingredients;
+	private List<Ingredient.ID> ingredients;
 
 	public Recipe (int id, string name, int timeLimit, List<Ingredient.ID> ingredients) {
 		this.id = id;
@@ -23,5 +23,15 @@ public class Recipe {
     public override string ToString()
     {
         return name;
+    }
+
+    public bool Contains(Ingredient.ID id)
+    {
+        return ingredients.Contains(id);
+    }
+
+    public List<Ingredient.ID> GetIngredients()
+    {
+        return new List<Ingredient.ID>(ingredients);
     }
 }

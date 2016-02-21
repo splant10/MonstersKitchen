@@ -8,6 +8,7 @@ public class Monster : MonoBehaviour, Attackable, Interactable {
 
     public void Attack(GameObject attacker)
     {
+        gameObject.GetComponent<Animator>().SetBool("isAlive", false);
         isAlive = false;
     }
 
@@ -15,7 +16,7 @@ public class Monster : MonoBehaviour, Attackable, Interactable {
     {
         if (!isAlive)
         {
-            interactor.GetComponent<PlayerController>().inventory.ingredients.Add(ingredient);
+            interactor.GetComponent<PlayerController>().inventory.Add(new Ingredient(ingredient));
         }
     }
 

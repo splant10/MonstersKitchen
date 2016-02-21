@@ -154,6 +154,7 @@ MonoBehaviour:
   bottomleft: {fileID: 452514}
   bottomright: {fileID: 451616}
   listOfOrders: {fileID: 0}
+  canv: {fileID: 0}
 --- !u!212 &21295730
 SpriteRenderer:
   m_ObjectHideFlags: 1

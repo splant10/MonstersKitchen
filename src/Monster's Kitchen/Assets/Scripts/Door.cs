@@ -29,9 +29,6 @@ public class Door : MonoBehaviour, Interactable {
             cameraZ = GameObject.Find("Main Camera").transform.position.z;
         }
         GameObject.Find("Main Camera").transform.position = new Vector3(cameraX, cameraY, cameraZ);
-
-        Debug.Log("WHO DARES INTERACT WITH THE DOOR?! (x=" + objectX + " y=" + objectY + " z=" + objectZ + ")");
-        Debug.Log(interactor.transform.position);
     }
 
     // Use this for initialization

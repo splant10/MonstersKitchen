@@ -69,11 +69,13 @@
     <Compile Include="Assets\Scripts\IngredientContainers.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
     <Compile Include="Assets\Scripts\Inventroy.cs" />
+    <Compile Include="Assets\Scripts\InventroyFullException.cs" />
     <Compile Include="Assets\Scripts\Monster.cs" />
     <Compile Include="Assets\Scripts\Order.cs" />
     <Compile Include="Assets\Scripts\OrderBlock.cs" />
     <Compile Include="Assets\Scripts\OrderCreater.cs" />
     <Compile Include="Assets\Scripts\OrderList.cs" />
+    <Compile Include="Assets\Scripts\OrderListener.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Recipe.cs" />
   </ItemGroup>
