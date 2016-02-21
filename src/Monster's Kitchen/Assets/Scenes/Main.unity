@@ -1243,7 +1243,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Move: WASD  Action: Q  Attack: E  Toggle HUD: H'
+  m_Text: 'Orders Failed: 0'
 --- !u!222 &467900846
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1548,6 +1548,10 @@ Prefab:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 046e8e5573381c842a9264d48fe1bd01, type: 2}
+    - target: {fileID: 11499488, guid: f1b7a5302365b334c9ed18fa26f90ac6, type: 2}
+      propertyPath: hudFailedCount
+      value: 
+      objectReference: {fileID: 467900845}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1b7a5302365b334c9ed18fa26f90ac6, type: 2}
   m_IsPrefabParent: 0
