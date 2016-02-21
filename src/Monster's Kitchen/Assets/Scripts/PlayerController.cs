@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour {
     private int ordersFailedCount;
     public Text hudFailedCount;
 
+    public Text invText;
+
     // Use this for initialization
     void Start () {
         facingRight = true;
@@ -37,11 +39,14 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        Order order = listOfOrders.Peek();
-        if (order.IsExpired())
+        if (!listOfOrders.IsEmpty())
         {
-            ordersFailedCount += 1;
-            hudFailedCount.text = "Orders Failed: " + ordersFailedCount.ToString();
+            Order order = listOfOrders.Peek();
+            if (order.IsExpired())
+            {
+                ordersFailedCount += 1;
+                hudFailedCount.text = "Orders Failed: " + ordersFailedCount.ToString();
+            }
         }
 
         Rigidbody2D rigidbody2D = GetComponent<Rigidbody2D>();
@@ -145,6 +150,8 @@ public class PlayerController : MonoBehaviour {
                 interactable.Interact(gameObject);
             }
         }
+
+        invText.text = "Inventory:\n" + inventory.ToString();
     }
 
     public void Attack()

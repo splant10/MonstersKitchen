@@ -31,10 +31,7 @@ public class Inventroy {
         {
             ingredients.Add(ingredient);
             Debug.Log("Picked up " + ingredient);
-        } else
-        {
-            throw new InventroyFullException();
-        } 
+        }
     }
 
     public bool Remove(Ingredient.ID id)
@@ -53,4 +50,14 @@ public class Inventroy {
 	public int InventorySize(){
 		return this.ingredients.Count;
 	}
+
+    public string ToString()
+    {
+        string s = "";
+        foreach (Ingredient i in ingredients)
+        {
+            s += i + "\n";
+        }
+        return s;
+    }
 }
