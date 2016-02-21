@@ -35,7 +35,9 @@ public class OrderList : MonoBehaviour {
 
     public Order PopOrder()
     {
+        Order returnOrder = orders.Dequeue();
         int i = 0;
+        orderBlocks[0].SetOrder(null);
         foreach (Order order in orders)
         {
             if (i > orderBlocks.Length)
@@ -45,7 +47,7 @@ public class OrderList : MonoBehaviour {
             orderBlocks[i].SetOrder(order);
             ++i;
         }
-        return orders.Dequeue();
+        return returnOrder;
     }
 
     public Order Peek()
