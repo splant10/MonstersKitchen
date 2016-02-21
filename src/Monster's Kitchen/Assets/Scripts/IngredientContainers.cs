@@ -8,16 +8,16 @@ public class IngredientContainers : MonoBehaviour, Interactable {
         // give interactor inventory one ingredient
         Inventroy playerInventory = interactor.GetComponent<PlayerController>().inventory;
 
-		for (int i = 0; i <= playerInventory.capacity; ++i) {
-			if (playerInventory.Contains(ingredient)) {
+		for (int i = 0; i <= playerInventory.InventorySize(); ++i) {
+/*			if (playerInventory.Contains(ingredient)) {
 				// make them stack
 				// TODO
 				break;
 			}
-			else if (!playerInventory.IsFull()) {
+			if () {*/
 				playerInventory.Add(new Ingredient(ingredient));
 				break;
-			}
+
 		}
 	}
 
