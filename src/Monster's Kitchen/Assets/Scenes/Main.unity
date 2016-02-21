@@ -124,6 +124,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 11472440, guid: a317b584519f54248a7820b116b688ce, type: 2}
+      propertyPath: ingredient
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a317b584519f54248a7820b116b688ce, type: 2}
   m_IsPrefabParent: 0
@@ -3180,8 +3184,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ff1d3711e5bdde4ea93ae4ce5f35993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  hudCount: {fileID: 0}
+  sploosh: {fileID: 0}
+=======
   hudCount: {fileID: 327207160}
   sploosh: {fileID: 8300000, guid: 338d25aa168a5ca4d952a7d622c8b7bb, type: 3}
+>>>>>>> 7762f703b7a47cb7eb78bf9749d35fc294a0a224
 --- !u!95 &1881045714
 Animator:
   serializedVersion: 3
