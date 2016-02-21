@@ -1,9 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using System;
 
 public class Cauldron : MonoBehaviour, Interactable {
+
+    public Text hudCount;
+    private int orderCompletedCount;
+
     public void Interact(GameObject interactor)
     {
 		//handles Order Completion
@@ -22,9 +27,12 @@ public class Cauldron : MonoBehaviour, Interactable {
                     order.AddIngredient(new Ingredient(requiredIngredients[i]));
 				}
 				if (order.Complete()) {
-					// Remove Order from Queue
+                    // Remove Order from Queue
+                    orderCompletedCount += 1;
 					orderList.PopOrder();
                     print("Completed order: " + order);
+                    hudCount.text = "Orders Completed: " + orderCompletedCount.ToString();
+
 				}
 
 			}
@@ -33,8 +41,8 @@ public class Cauldron : MonoBehaviour, Interactable {
 
     // Use this for initialization
     void Start () {
-	
-	}
+        orderCompletedCount = 0;
+    }
 	
 	// Update is called once per frame
 	void Update () {
