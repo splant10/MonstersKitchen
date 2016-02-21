@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 
 public class Inventroy {
-	public int capacity = 10;
+//	public int capacity = 10;
 	private List<Ingredient> ingredients;
 
 	public Inventroy(){
@@ -20,21 +20,21 @@ public class Inventroy {
 		return false;
 	}
 
-    public bool IsFull()
+ /*   public bool IsFull()
     {
         return ingredients.Count >= capacity;
-    }
+    }*/
 
     public void Add(Ingredient ingredient)
     {
-        if (!IsFull())
+		if (!ingredients.Contains(ingredient))
         {
             ingredients.Add(ingredient);
             Debug.Log("Picked up " + ingredient);
         } else
         {
             throw new InventroyFullException();
-        }
+        } 
     }
 
     public bool Remove(Ingredient.ID id)
@@ -50,4 +50,7 @@ public class Inventroy {
         }
         return false;
     }
+	public int InventorySize(){
+		return this.ingredients.Count;
+	}
 }
