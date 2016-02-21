@@ -7,7 +7,7 @@ public class Ingredient {
     private ID id;
     private string name;
 
-    public enum ID {NONE, FLOUR, SUGAR, EGGS }
+    public enum ID {NONE, FLOUR, SUGAR, EGGS, OGREEGG, SPIDEREYE, STARFISHBLOOD }
     private static Dictionary<ID, string> names;
     static Ingredient()
     {
@@ -15,7 +15,10 @@ public class Ingredient {
         names.Add(ID.FLOUR, "Flour");
         names.Add(ID.SUGAR, "Sugar");
         names.Add(ID.EGGS, "Eggs");
-    }
+		names.Add(ID.OGREEGG, "Ogre Egg");
+		names.Add(ID.SPIDEREYE, "Spider Eye");
+		names.Add(ID.STARFISHBLOOD, "StarFish Blood");
+	}
 
 	public Ingredient (ID id, string name) {
 		this.id = id;
