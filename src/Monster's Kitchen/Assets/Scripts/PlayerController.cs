@@ -67,9 +67,9 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
-		// handles order expiration
-		if (listOfOrders.orders.Count > 0 && listOfOrders.orders.Peek().IsExpired()) {
-			listOfOrders.orders.Dequeue();
+        // handles order expiration
+		if (!listOfOrders.IsEmpty() && listOfOrders.Peek().IsExpired()) {
+			listOfOrders.PopOrder();
 		}
         if (Input.GetAxis("Fire1") != 0/* && !recentlyInteracted*/)
         {

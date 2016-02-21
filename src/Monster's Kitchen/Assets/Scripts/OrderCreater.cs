@@ -10,6 +10,7 @@ public class OrderCreater : MonoBehaviour {
     public OrderList orderList;
 
     public float timeBetweenOrders;
+    public float firstOrderTime;
 
 	public OrderCreater(){
 
@@ -24,7 +25,7 @@ public class OrderCreater : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
-        lastOrderTime = Time.time;
+        lastOrderTime = Time.time  - (timeBetweenOrders - firstOrderTime);
 	}
 	
 	// Update is called once per frame

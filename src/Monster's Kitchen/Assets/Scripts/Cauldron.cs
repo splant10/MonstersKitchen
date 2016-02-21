@@ -7,22 +7,25 @@ public class Cauldron : MonoBehaviour, Interactable {
     public void Interact(GameObject interactor)
     {
 		//handles Order Completion
-		Debug.Log("Yo, we haven't implemented cooking yet.");
-		if (interactor.GetComponent<PlayerController> ().listOfOrders.orders.Count > 0) {
-			Order order = interactor.GetComponent<PlayerController> ().listOfOrders.orders.Peek ();
+        OrderList orderList = interactor.GetComponent<PlayerController>().listOfOrders;
+
+		if (!orderList.IsEmpty()) {
+			Order order = orderList.Peek ();
 		
 			List<Ingredient.ID> inventory = interactor.GetComponent<PlayerController> ().inventory.ingredients;
 			int numCorrectIDs = 0;
 
 			for (int i = 0; i < order.ingredients.Count; ++i) {
-				if (interactor.GetComponent<PlayerController> ().inventory.Contains (order.ingredients [i])) {
+                print(numCorrectIDs);
+				if (inventory.Contains (order.ingredients [i])) {
 					numCorrectIDs += 1;
 				}
 				if (numCorrectIDs == order.ingredients.Count) {
 					// Order is Correct do something
 
 					// Remove Order from Queue
-					interactor.GetComponent<PlayerController> ().listOfOrders.orders.Dequeue ();
+					orderList.PopOrder();
+                    print("Popped order");
 				}
 
 			}

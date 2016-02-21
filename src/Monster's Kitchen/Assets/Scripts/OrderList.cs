@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class OrderList : MonoBehaviour {
-	public Queue <Order> orders;
+	private Queue <Order> orders;
 	public float timeLimit;
     public OrderBlock[] orderBlocks;
 
@@ -32,5 +32,32 @@ public class OrderList : MonoBehaviour {
         }
 		orders.Enqueue(order);
 	}
+
+    public Order PopOrder()
+    {
+        Order returnOrder = orders.Dequeue();
+        int i = 0;
+        orderBlocks[0].SetOrder(null);
+        foreach (Order order in orders)
+        {
+            if (i > orderBlocks.Length)
+            {
+                break;
+            }
+            orderBlocks[i].SetOrder(order);
+            ++i;
+        }
+        return returnOrder;
+    }
+
+    public Order Peek()
+    {
+        return orders.Peek();
+    }
+
+    public bool IsEmpty()
+    {
+        return orders.Count == 0;
+    }
 
 }
