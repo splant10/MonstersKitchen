@@ -8,6 +8,8 @@ public class Cauldron : MonoBehaviour, Interactable {
 
     public Text hudCount;
     private int orderCompletedCount;
+    public AudioClip sploosh;
+    private AudioSource source;
 
     public void Interact(GameObject interactor)
     {
@@ -32,8 +34,10 @@ public class Cauldron : MonoBehaviour, Interactable {
 					orderList.PopOrder();
                     print("Completed order: " + order);
                     hudCount.text = "Orders Completed: " + orderCompletedCount.ToString();
+                    source = gameObject.GetComponent<AudioSource>();
+                    source.PlayOneShot(sploosh);
 
-				}
+                }
 
 			}
 		}
