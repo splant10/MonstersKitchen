@@ -827,10 +827,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1626,6 +1626,10 @@ Prefab:
       propertyPath: hudFailedCount
       value: 
       objectReference: {fileID: 467900845}
+    - target: {fileID: 11499488, guid: f1b7a5302365b334c9ed18fa26f90ac6, type: 2}
+      propertyPath: invText
+      value: 
+      objectReference: {fileID: 367987521}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1b7a5302365b334c9ed18fa26f90ac6, type: 2}
   m_IsPrefabParent: 0
