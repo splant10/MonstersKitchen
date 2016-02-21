@@ -47,6 +47,11 @@ public class OrderList : MonoBehaviour {
             orderBlocks[i].SetOrder(order);
             ++i;
         }
+
+        if (i < orderBlocks.Length)
+        {
+            orderBlocks[i].SetOrder(null);
+        }
         return returnOrder;
     }
 
