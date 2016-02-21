@@ -32,6 +32,6 @@ public class Recipe {
 
     public List<Ingredient.ID> GetIngredients()
     {
-        return ingredients;
+        return new List<Ingredient.ID>(ingredients);
     }
 }

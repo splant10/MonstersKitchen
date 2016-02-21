@@ -14,7 +14,6 @@ public class Order {
 	public Order(Recipe newRecipe) {
 		this.recipe = newRecipe;
 		this.ingredients = new List<Ingredient>();
-        this.requiredIngredients = new List<Ingredient.ID>();
         this.requiredIngredients = newRecipe.GetIngredients();
         this.listeners = new List<OrderListener>();
 		this.id = 0;
