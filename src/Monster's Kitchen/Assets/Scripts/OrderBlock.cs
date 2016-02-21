@@ -11,6 +11,10 @@ public class OrderBlock : MonoBehaviour, OrderListener {
 
     public void SetOrder(Order order)
     {
+        if (order != null)
+        {
+            order.RemoveListener(this);
+        }
         this.order = order;
         if (order != null)
         {
@@ -49,14 +53,17 @@ public class OrderBlock : MonoBehaviour, OrderListener {
 
     public void OrderUpdated(Order o)
     {
-        ingredientsText.text = "";
-        foreach (Ingredient ingredient in order.GetAddedIngredients())
+        if (order != null)
         {
-            ingredientsText.text += "✔" + ingredient + "\n";
-        }
-        foreach (Ingredient.ID id in order.GetRequiredIngredients())
-        {
-            ingredientsText.text += Ingredient.Name(id) + "\n";
+            ingredientsText.text = "";
+            foreach (Ingredient ingredient in order.GetAddedIngredients())
+            {
+                ingredientsText.text += "✔" + ingredient + "\n";
+            }
+            foreach (Ingredient.ID id in order.GetRequiredIngredients())
+            {
+                ingredientsText.text += Ingredient.Name(id) + "\n";
+            }
         }
     }
 }

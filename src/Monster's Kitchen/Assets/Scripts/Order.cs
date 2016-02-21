@@ -70,6 +70,11 @@ public class Order {
         listeners.Add(listener);
     }
 
+    public void RemoveListener(OrderListener listener)
+    {
+        listeners.Remove(listener);
+    }
+
     private void NotifyListeners()
     {
         foreach (OrderListener listener in listeners)
