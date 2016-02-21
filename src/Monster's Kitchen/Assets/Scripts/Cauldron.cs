@@ -13,15 +13,15 @@ public class Cauldron : MonoBehaviour, Interactable {
 			Order order = orderList.Peek ();
 		
 			Inventroy inventory = interactor.GetComponent<PlayerController> ().inventory;
-			int numCorrectIDs = 0;
+            List<Ingredient.ID> requiredIngredients = new List<Ingredient.ID>(order.GetRequiredIngredients());
 
-			for (int i = 0; i < order.ingredients.Count; ++i) {
-				if (inventory.Contains(order.ingredients[i])) {
-					numCorrectIDs += 1;
+			for (int i = 0; i < requiredIngredients.Count; ++i) {
+				if (inventory.Contains(requiredIngredients[i]))
+                {
+                    inventory.Remove(requiredIngredients[i]);
+                    order.AddIngredient(new Ingredient(requiredIngredients[i]));
 				}
-				if (numCorrectIDs == order.ingredients.Count) {
-					// Order is Correct do something
-
+				if (order.Complete()) {
 					// Remove Order from Queue
 					orderList.PopOrder();
                     print("Completed order: " + order);

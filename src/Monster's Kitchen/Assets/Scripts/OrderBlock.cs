@@ -15,7 +15,11 @@ public class OrderBlock : MonoBehaviour {
         {
             orderNameText.text = order.ToString();
             ingredientsText.text = "";
-            foreach (Ingredient.ID id in order.ingredients)
+            foreach (Ingredient ingredient in order.GetAddedIngredients())
+            {
+                ingredientsText.text += "✔" + ingredient + "\n";
+            }
+            foreach (Ingredient.ID id in order.GetRequiredIngredients())
             {
                 ingredientsText.text += Ingredient.Name(id) + "\n";
             }
@@ -37,6 +41,17 @@ public class OrderBlock : MonoBehaviour {
 	void Update () {
         if (order != null)
         {
+            orderNameText.text = order.ToString();
+            ingredientsText.text = "";
+            foreach (Ingredient ingredient in order.GetAddedIngredients())
+            {
+                ingredientsText.text += "✔" + ingredient + "\n";
+            }
+            foreach (Ingredient.ID id in order.GetRequiredIngredients())
+            {
+                ingredientsText.text += Ingredient.Name(id) + "\n";
+            }
+
             timeRemainingText.text = string.Format("{0:f2}s", order.TimeRemaining());
         }
     }

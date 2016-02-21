@@ -43,6 +43,7 @@ public class Inventroy {
         {
             if (this.ingredients[i].getID() == id)
             {
+                Debug.Log("Removed ingredient from inv: " + ingredients[i]);
                 ingredients.Remove(ingredients[i]);
                 return true;
             }
