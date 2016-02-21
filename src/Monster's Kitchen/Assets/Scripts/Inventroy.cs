@@ -36,4 +36,17 @@ public class Inventroy {
             throw new InventroyFullException();
         }
     }
+
+    public bool Remove(Ingredient.ID id)
+    {
+        for (int i = 0; i < this.ingredients.Count; ++i)
+        {
+            if (this.ingredients[i].getID() == id)
+            {
+                ingredients.Remove(ingredients[i]);
+                return true;
+            }
+        }
+        return false;
+    }
 }
