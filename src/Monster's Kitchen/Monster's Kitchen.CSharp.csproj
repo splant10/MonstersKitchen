@@ -65,12 +65,14 @@
     <Compile Include="Assets\Scripts\Attackable.cs" />
     <Compile Include="Assets\Scripts\Cauldron.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
+    <Compile Include="Assets\Scripts\DoorListener.cs" />
     <Compile Include="Assets\Scripts\Ingredient.cs" />
     <Compile Include="Assets\Scripts\IngredientContainers.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
     <Compile Include="Assets\Scripts\Inventroy.cs" />
     <Compile Include="Assets\Scripts\InventroyFullException.cs" />
     <Compile Include="Assets\Scripts\Monster.cs" />
+    <Compile Include="Assets\Scripts\MonsterSpawner.cs" />
     <Compile Include="Assets\Scripts\Order.cs" />
     <Compile Include="Assets\Scripts\OrderBlock.cs" />
     <Compile Include="Assets\Scripts\OrderCreater.cs" />
