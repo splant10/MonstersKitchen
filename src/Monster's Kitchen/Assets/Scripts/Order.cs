@@ -9,11 +9,14 @@ public class Order {
     private List<Ingredient.ID> requiredIngredients;
 	private int id;
 
+    private List<OrderListener> listeners;
+
 	public Order(Recipe newRecipe) {
 		this.recipe = newRecipe;
 		this.ingredients = new List<Ingredient>();
         this.requiredIngredients = new List<Ingredient.ID>();
-        requiredIngredients = newRecipe.GetIngredients();
+        this.requiredIngredients = newRecipe.GetIngredients();
+        this.listeners = new List<OrderListener>();
 		this.id = 0;
         startTime = Time.time;
 	}
@@ -37,6 +40,7 @@ public class Order {
             Debug.Log("Added " + ingredient + " to Order of " + this);
             ingredients.Add(ingredient);
             requiredIngredients.Remove(ingredient.getID());
+            NotifyListeners();
             return true;
         }
         return false;
@@ -60,5 +64,18 @@ public class Order {
     public bool Complete()
     {
         return requiredIngredients.Count == 0;
+    }
+
+    public void AddListener(OrderListener listener)
+    {
+        listeners.Add(listener);
+    }
+
+    private void NotifyListeners()
+    {
+        foreach (OrderListener listener in listeners)
+        {
+            listener.OrderUpdated(this);
+        }
     }
 }
