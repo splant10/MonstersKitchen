@@ -9,14 +9,13 @@ public class IngredientContainers : MonoBehaviour, Interactable {
         Inventroy playerInventory = interactor.GetComponent<PlayerController>().inventory;
 
 		for (int i = 0; i <= playerInventory.capacity; ++i) {
-			if (playerInventory.ingredients[i].Equals(ingredient)) {
+			if (playerInventory.Contains(ingredient)) {
 				// make them stack
 				// TODO
 				break;
 			}
-			if (playerInventory.ingredients[i] == Ingredient.ID.NONE) {
-				playerInventory.ingredients[i] = ingredient;
-				Debug.Log ("added ingredient to inventory");
+			else if (!playerInventory.IsFull()) {
+				playerInventory.Add(new Ingredient(ingredient));
 				break;
 			}
 		}

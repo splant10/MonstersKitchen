@@ -76,8 +76,11 @@ public class PlayerController : MonoBehaviour {
 		}
         if (Input.GetAxis("Fire1") != 0)
         {
-            // Interact();
+            Attack();
             anim.SetBool("isAttacking", true);
+        } else
+        {
+            anim.SetBool("isAttacking", false);
         }
 
         if (Input.GetAxis("Fire2") != 0 && !recentlyInteracted)
@@ -127,6 +130,18 @@ public class PlayerController : MonoBehaviour {
             if (interactable != null)
             {
                 interactable.Interact(gameObject);
+            }
+        }
+    }
+
+    public void Attack()
+    {
+        foreach (RaycastHit2D cast in Physics2D.LinecastAll(gameObject.transform.position, gameObject.transform.position))
+        {
+            Attackable attackable = cast.collider.gameObject.GetComponent<Attackable>();
+            if (attackable != null)
+            {
+                attackable.Attack(gameObject);
             }
         }
     }

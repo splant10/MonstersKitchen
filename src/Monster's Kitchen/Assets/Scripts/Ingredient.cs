@@ -20,9 +20,8 @@ public class Ingredient {
 		names.Add(ID.STARFISHBLOOD, "StarFish Blood");
 	}
 
-	public Ingredient (ID id, string name) {
+	public Ingredient (ID id) {
 		this.id = id;
-		this.name = name;
 	}
 
 	bool IsFlour() {
@@ -36,5 +35,15 @@ public class Ingredient {
     public static string Name(Ingredient.ID id)
     {
         return names[id];
+    }
+
+    public override string ToString()
+    {
+        return Name(id);
+    }
+
+    public ID getID()
+    {
+        return id;
     }
 }

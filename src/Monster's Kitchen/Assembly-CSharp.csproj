@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\IngredientContainers.cs" />
      <Compile Include="Assets\Scripts\Interactable.cs" />
      <Compile Include="Assets\Scripts\Inventroy.cs" />
+     <Compile Include="Assets\Scripts\InventroyFullException.cs" />
      <Compile Include="Assets\Scripts\Monster.cs" />
      <Compile Include="Assets\Scripts\Order.cs" />
      <Compile Include="Assets\Scripts\OrderBlock.cs" />

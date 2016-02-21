@@ -726,7 +726,7 @@ GameObject:
   - 60: {fileID: 620264176}
   - 95: {fileID: 620264175}
   m_Layer: 0
-  m_Name: star
+  m_Name: Star
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -758,7 +758,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
@@ -891,6 +891,10 @@ Prefab:
       propertyPath: listOfOrders
       value: 
       objectReference: {fileID: 64885632}
+    - target: {fileID: 11499488, guid: f1b7a5302365b334c9ed18fa26f90ac6, type: 2}
+      propertyPath: canv
+      value: 
+      objectReference: {fileID: 80763925}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1b7a5302365b334c9ed18fa26f90ac6, type: 2}
   m_IsPrefabParent: 0

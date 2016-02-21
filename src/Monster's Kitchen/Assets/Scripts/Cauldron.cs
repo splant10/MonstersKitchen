@@ -12,12 +12,11 @@ public class Cauldron : MonoBehaviour, Interactable {
 		if (!orderList.IsEmpty()) {
 			Order order = orderList.Peek ();
 		
-			List<Ingredient.ID> inventory = interactor.GetComponent<PlayerController> ().inventory.ingredients;
+			Inventroy inventory = interactor.GetComponent<PlayerController> ().inventory;
 			int numCorrectIDs = 0;
 
 			for (int i = 0; i < order.ingredients.Count; ++i) {
-                print(numCorrectIDs);
-				if (inventory.Contains (order.ingredients [i])) {
+				if (inventory.Contains(order.ingredients[i])) {
 					numCorrectIDs += 1;
 				}
 				if (numCorrectIDs == order.ingredients.Count) {
@@ -25,7 +24,7 @@ public class Cauldron : MonoBehaviour, Interactable {
 
 					// Remove Order from Queue
 					orderList.PopOrder();
-                    print("Popped order");
+                    print("Completed order: " + order);
 				}
 
 			}
