@@ -86,6 +86,7 @@ public class PlayerController : MonoBehaviour {
 		if (!listOfOrders.IsEmpty() && listOfOrders.Peek().IsExpired()) {
 			listOfOrders.PopOrder();
 		}
+
         if (Input.GetAxis("Fire1") != 0)
         {
             Attack();
