@@ -183,6 +183,7 @@ MonoBehaviour:
   - {fileID: 1747481077}
   - {fileID: 1716255462}
   - {fileID: 1735742994}
+  hudFailedCount: {fileID: 467900845}
 --- !u!114 &64885633
 MonoBehaviour:
   m_ObjectHideFlags: 0
